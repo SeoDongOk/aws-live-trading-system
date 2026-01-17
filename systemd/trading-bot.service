@@ -1,0 +1,29 @@
+[Unit]
+Description=Auto Trading Bot
+After=network.target
+
+[Service]
+Type=simple
+User=seodong-og
+Group=seodong-og
+WorkingDirectory=/home/seodong-og/project/aws-live-trading-system
+
+# 가상환경 python 직접 사용
+ExecStart=/home/seodong-og/project/aws-live-trading-system/auto_trade/bin/python -u main.py
+
+# 자동 재시작 설정
+Restart=always
+RestartSec=10
+
+# 프로세스 종료 설정
+KillMode=mixed
+KillSignal=SIGTERM
+TimeoutStopSec=30
+
+# 로그 설정
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=trading-bot
+
+[Install]
+WantedBy=multi-user.target

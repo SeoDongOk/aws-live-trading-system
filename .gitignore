@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+
+# 가상환경
+venv/
+week4/
+env/
+ENV/
+
+# 환경 변수
+.env
+*.env
+
+# 로그
+logs/
+*.log
+output.log
+nohup.out
+
+# 기타
+.DS_Store
+*.swp
+*.swo
+.vscode/
+.idea/
+auto_trade/
+
+# 가상환경
+auto_trade/
